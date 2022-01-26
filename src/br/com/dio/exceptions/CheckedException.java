@@ -6,7 +6,7 @@ import java.io.*;
 //Imprimir um arquivo no console.
 public class CheckedException {
     public static void main(String[] args) {
-        String nomeDoArquivo = "romance-blake-crouch.txt";
+        String nomeDoArquivo = "romances-blake-crouch.txt";
 
         try {
             imprimirArquivoNoConsole(nomeDoArquivo);
@@ -32,6 +32,10 @@ public class CheckedException {
         String line = br.readLine();
 
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    /*
+        // todo esto aquí viene siendo del FileReader
+        // y cosas muchos más genéricas + por eso ella nos manda a ver al EQUIPO DE SOPORTE jajaja
+        */
 
         do{
             bw.write(line);

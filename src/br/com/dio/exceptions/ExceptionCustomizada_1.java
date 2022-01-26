@@ -6,13 +6,16 @@ import java.io.*;
 public class ExceptionCustomizada_1 {
     public static void main(String[] args) {
         String nomeDoArquivo = JOptionPane.showInputDialog("Nome do arquivo a ser exibido: ");
-
-        imprimirArquivoNoConsole(nomeDoArquivo);
+        //LLAMADA DEL MÈTODO en la CONSOLE -- BUENA PRÁCTICA DE PROGRAMACIÓN
+        imprimirArquivoNoConsole(nomeDoArquivo); //
         System.out.println("\nCom exception ou não, o programa continua...");
     }
 
     public static void imprimirArquivoNoConsole(String nomeDoArquivo) {
-
+    /*Queriendo hacer un Output. En el ejemplo anterior Imprimíamos dentro del Mismo método,
+eso no es Buena Práctica, mejor realizar sólo el método + lógica y en otra parte Hacer la
+llamada para Imprimir
+    */
         try {
             BufferedReader br = lerArquivo(nomeDoArquivo);
             String line = br.readLine();
@@ -35,6 +38,7 @@ public class ExceptionCustomizada_1 {
         }
     }
 
+    // método de Lectura
     public static BufferedReader lerArquivo(String nomeDoArquivo) throws ImpossivelAberturaDeArquivoException {
 
         File file = new File(nomeDoArquivo);

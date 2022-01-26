@@ -14,7 +14,7 @@ public class UncheckedException {
             try{
                 int resultado = dividir(Integer.parseInt(a), Integer.parseInt(b));
                 System.out.println("Resultado: " + resultado);
-                continueLooping = false;
+                continueLooping = false; // Hasta que no se haga Correctamente. Correcto = TRY
             } catch (NumberFormatException e) {
                 e.printStackTrace();
                 JOptionPane.showMessageDialog(null, "Entrada inválida, informe um número inteiro! " + e.getMessage());
